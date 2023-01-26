@@ -27,7 +27,7 @@ Set the main class environment variable to `MAIN_CLASS=com.benjaminleephoto.aws.
 
 <p style="color:red"> Failed to discover main class. An attempt was made to discover main class as 'MAIN_CLASS' environment variable, system property as well as entry in META-INF/MANIFEST.MF (in that order).</p>
 
-Be sure to add the text you would like to input to your lambda function in the "Text" field.
+Be sure to add the text you would like to input to your lambda function in the "Text" field for example `{"body":"ABC"}`
 
 ### Remote
 
@@ -48,3 +48,9 @@ Lastly the function code settings can be set as so, please create an S3 bucket w
 ![Remote Code Update](./assets/images/remote-code-update.png)
 
 To run the lambda remotely simply right-click on the lambda in the AWS Toolkit window and select `Update Function Code`. Once the updated code has been published to AWS simply run the remote lambda run configuration in your IDE to execute the lambda on AWS.
+
+## Command Line Execution
+
+After deploying the Lambda to AWS it can be called from the command line with the following. Be sure to set up a Lambda Function URL first.
+
+`curl "https://******.lambda-url.us-east-1.on.aws" -X GET -H "Content-type: text/plain" -d 'ABC'`
