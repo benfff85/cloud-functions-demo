@@ -1,11 +1,9 @@
 package com.benjaminleephoto.aws.cloudfunctionsdemo;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertNull;
-
 import com.amazonaws.services.lambda.runtime.events.APIGatewayV2HTTPResponse;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 class CloudFunctionsDemoApplicationTest {
     /**

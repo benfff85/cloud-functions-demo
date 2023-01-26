@@ -11,17 +11,17 @@ import java.util.function.Function;
 @SpringBootApplication
 public class CloudFunctionsDemoApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(CloudFunctionsDemoApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(CloudFunctionsDemoApplication.class, args);
+    }
 
-	@Bean
-	public Function<String, APIGatewayV2HTTPResponse> reverseString() {
-		return value -> APIGatewayV2HTTPResponse.builder()
-				.withStatusCode(200)
-				.withBody(new StringBuilder(value).reverse().toString())
-				.build();
+    @Bean
+    public Function<String, APIGatewayV2HTTPResponse> reverseString() {
+        return value -> APIGatewayV2HTTPResponse.builder()
+                .withStatusCode(200)
+                .withBody(new StringBuilder(value).reverse().toString())
+                .build();
 
-	}
+    }
 
 }
